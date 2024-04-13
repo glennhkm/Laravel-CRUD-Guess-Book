@@ -1,0 +1,347 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Name
+    |--------------------------------------------------------------------------
+    |
+    | This value is the name of your application, which will be used when the
+    | framework needs to place the application's name in a notification or
+    | other UI elements where an application name needs to be displayed.
+    |
+    */
+
+    'name' => env('APP_NAME', 'Laravel'),
+
+    /*  
+    |--------------------------------------------------------------------------
+    | Application Environment
+    |--------------------------------------------------------------------------
+    |
+    | This value determines the "environment" your application is currently
+    | running in. This may determine how you prefer to configure various
+    | services the application utilizes. Set this in your ".env" file.
+    |
+    */
+
+    'env' => env('APP_ENV', 'production'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | CDN LINK
+    |--------------------------------------------------------------------------
+    | By default SweetAlert2 use its local sweetalert.all.js
+    | file.
+    | However, you can use its cdn if you want.
+    |
+    */
+
+        'cdn' => env('SWEET_ALERT_CDN'),
+
+        /*
+    |--------------------------------------------------------------------------
+    | Always load the sweetalert.all.js
+    |--------------------------------------------------------------------------
+    | There might be situations where you will always want the sweet alert
+    | js package to be there for you. (for eg. you might use it heavily to
+    | show notifications or you might want to use the native js) then this
+    | might be handy.
+    |
+    */
+
+        'alwaysLoadJS' => env('SWEET_ALERT_ALWAYS_LOAD_JS', false),
+
+        /*
+    |--------------------------------------------------------------------------
+    | Never load the sweetalert.all.js
+    |--------------------------------------------------------------------------
+    | If you want to handle the sweet alert js package by yourself
+    | (for eg. you might want to use laravel mix) then this can be
+    | handy.
+    | If you set always load js to true & never load js to false,
+    | it's going to prioritize the never load js.
+    |
+    | alwaysLoadJs = true  & neverLoadJs = true  => js will not be loaded
+    | alwaysLoadJs = true  & neverLoadJs = false => js will be loaded
+    | alwaysLoadJs = false & neverLoadJs = false => js will be loaded when
+    | you set alert/toast by using the facade/helper functions.
+    */
+
+        'neverLoadJS' => env('SWEET_ALERT_NEVER_LOAD_JS', false),
+
+        /*
+    |--------------------------------------------------------------------------
+    | AutoClose Timer
+    |--------------------------------------------------------------------------
+    |
+    | This is for the all Modal windows.
+    | For specific modal just use the autoClose() helper method.
+    |
+    */
+
+        'timer' => env('SWEET_ALERT_TIMER', 5000),
+
+        /*
+    |--------------------------------------------------------------------------
+    | Width
+    |--------------------------------------------------------------------------
+    |
+    | Modal window width, including paddings (box-sizing: border-box).
+    | Can be in px or %.
+    | The default width is 32rem.
+    | This is for the all Modal windows.
+    | for particular modal just use the width() helper method.
+    */
+
+        'width' => env('SWEET_ALERT_WIDTH', '32rem'),
+
+        /*
+    |--------------------------------------------------------------------------
+    | Height Auto
+    |--------------------------------------------------------------------------
+    | By default, SweetAlert2 sets html's and body's CSS height to auto !important.
+    | If this behavior isn't compatible with your project's layout,
+    | set heightAuto to false.
+    |
+    */
+
+        'height_auto' => env('SWEET_ALERT_HEIGHT_AUTO', true),
+
+        /*
+    |--------------------------------------------------------------------------
+    | Padding
+    |--------------------------------------------------------------------------
+    |
+    | Modal window padding.
+    | Can be in px or %.
+    | The default padding is 1.25rem.
+    | This is for the all Modal windows.
+    | for particular modal just use the padding() helper method.
+    */
+
+        'padding' => env('SWEET_ALERT_PADDING', '1.25rem'),
+
+        /*
+    |--------------------------------------------------------------------------
+    | Animation
+    |--------------------------------------------------------------------------
+    | Custom animation with [Animate.css](https://daneden.github.io/animate.css/)
+    | If set to false, modal CSS animation will be use default ones.
+    | For specific modal just use the animation() helper method.
+    |
+    */
+
+        'animation' => [
+            'enable' => env('SWEET_ALERT_ANIMATION_ENABLE', false),
+        ],
+
+        'animatecss' => env('SWEET_ALERT_ANIMATECSS', 'https://cdn.jsdelivr.net/npm/animate.css'),
+
+        /*
+    |--------------------------------------------------------------------------
+    | ShowConfirmButton
+    |--------------------------------------------------------------------------
+    | If set to false, a "Confirm"-button will not be shown.
+    | It can be useful when you're using custom HTML description.
+    | This is for the all Modal windows.
+    | For specific modal just use the showConfirmButton() helper method.
+    |
+    */
+
+        'show_confirm_button' => env('SWEET_ALERT_CONFIRM_BUTTON', true),
+
+        /*
+    |--------------------------------------------------------------------------
+    | ShowCloseButton
+    |--------------------------------------------------------------------------
+    | If set to true, a "Close"-button will be shown,
+    | which the user can click on to dismiss the modal.
+    | This is for the all Modal windows.
+    | For specific modal just use the showCloseButton() helper method.
+    |
+    */
+
+        'show_close_button' => env('SWEET_ALERT_CLOSE_BUTTON', false),
+
+        /*
+    |-----------------------------------------------------------------------
+    | Confirm/Cancel Button Text
+    |-----------------------------------------------------------------------
+    | Change the default text of the modal buttons.
+    | The texts translations will be handled by Laravel at runtime.
+    | This is for the all Modal windows.
+    | For specific modal just use the confirmButtonText() and
+    | cancelButtonText() helper methods.
+    */
+
+        'button_text' => [
+            'confirm' => env('SWEET_ALERT_CONFIRM_BUTTON_TEXT', 'OK'),
+            'cancel' => env('SWEET_ALERT_CANCEL_BUTTON_TEXT', 'Cancel'),
+        ],
+
+        /*
+    |--------------------------------------------------------------------------
+    | Toast position
+    |--------------------------------------------------------------------------
+    | Modal window or toast position, can be 'top',
+    | 'top-start', 'top-end', 'center', 'center-start',
+    | 'center-end', 'bottom', 'bottom-start', or 'bottom-end'.
+    | For specific modal just use the position() helper method.
+    |
+    */
+
+        'toast_position' => env('SWEET_ALERT_TOAST_POSITION', 'top-end'),
+
+        /*
+    |--------------------------------------------------------------------------
+    | Progress Bar
+    |--------------------------------------------------------------------------
+    | If set to true, a progress bar at the bottom of a popup will be shown.
+    | It can be useful with toasts.
+    |
+    */
+
+        'timer_progress_bar' => env('SWEET_ALERT_TIMER_PROGRESS_BAR', false),
+
+        /*
+    |--------------------------------------------------------------------------
+    | Middleware
+    |--------------------------------------------------------------------------
+    | Modal window or toast, config for the Middleware
+    |
+    */
+
+        'middleware' => [
+
+            'toast_position' => env('SWEET_ALERT_MIDDLEWARE_TOAST_POSITION', 'top-end'),
+
+            'toast_close_button' => env('SWEET_ALERT_MIDDLEWARE_TOAST_CLOSE_BUTTON', true),
+
+            'alert_auto_close' => env('SWEET_ALERT_MIDDLEWARE_ALERT_AUTO_CLOSE', 5000),
+            'auto_display_error_messages' => env('SWEET_ALERT_AUTO_DISPLAY_ERROR_MESSAGES', false),
+        ],
+
+        /*
+    |--------------------------------------------------------------------------
+    | Custom Class
+    |--------------------------------------------------------------------------
+    | A custom CSS class for the modal:
+    |
+    */
+
+    'customClass' => [
+
+        'container' => env('SWEET_ALERT_CONTAINER_CLASS'),
+        'popup' => env('SWEET_ALERT_POPUP_CLASS'),
+        'header' => env('SWEET_ALERT_HEADER_CLASS'),
+        'title' => env('SWEET_ALERT_TITLE_CLASS'),
+        'closeButton' => env('SWEET_ALERT_CLOSE_BUTTON_CLASS'),
+        'icon' => env('SWEET_ALERT_ICON_CLASS'),
+        'image' => env('SWEET_ALERT_IMAGE_CLASS'),
+        'content' => env('SWEET_ALERT_CONTENT_CLASS'),
+        'input' => env('SWEET_ALERT_INPUT_CLASS'),
+        'actions' => env('SWEET_ALERT_ACTIONS_CLASS'),
+        'confirmButton' => env('SWEET_ALERT_CONFIRM_BUTTON_CLASS'),
+        'cancelButton' => env('SWEET_ALERT_CANCEL_BUTTON_CLASS'),
+        'footer' => env('SWEET_ALERT_FOOTER_CLASS'),
+    ],
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Debug Mode
+    |--------------------------------------------------------------------------
+    |
+    | When your application is in debug mode, detailed error messages with
+    | stack traces will be shown on every error that occurs within your
+    | application. If disabled, a simple generic error page is shown.
+    |
+    */
+
+    'debug' => (bool) env('APP_DEBUG', false),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application URL
+    |--------------------------------------------------------------------------
+    |
+    | This URL is used by the console to properly generate URLs when using
+    | the Artisan command line tool. You should set this to the root of
+    | the application so that it's available within Artisan commands.
+    |
+    */
+
+    'url' => env('APP_URL', 'http://localhost'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Timezone
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify the default timezone for your application, which
+    | will be used by the PHP date and date-time functions. The timezone
+    | is set to "UTC" by default as it is suitable for most use cases.
+    |
+    */
+
+    'timezone' => env('APP_TIMEZONE', 'Asia/Jakarta'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Locale Configuration
+    |--------------------------------------------------------------------------
+    |
+    | The application locale determines the default locale that will be used
+    | by Laravel's translation / localization methods. This option can be
+    | set to any locale for which you plan to have translation strings.
+    |
+    */
+
+    'locale' => env('APP_LOCALE', 'id'),
+
+    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'id'),
+
+    'faker_locale' => env('APP_FAKER_LOCALE', 'id_ID'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Encryption Key
+    |--------------------------------------------------------------------------
+    |
+    | This key is utilized by Laravel's encryption services and should be set
+    | to a random, 32 character string to ensure that all encrypted values
+    | are secure. You should do this prior to deploying the application.
+    |
+    */
+
+    'cipher' => 'AES-256-CBC',
+
+    'key' => env('APP_KEY'),
+
+    'previous_keys' => [
+        ...array_filter(
+            explode(',', env('APP_PREVIOUS_KEYS', ''))
+        ),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Maintenance Mode Driver
+    |--------------------------------------------------------------------------
+    |
+    | These configuration options determine the driver used to determine and
+    | manage Laravel's "maintenance mode" status. The "cache" driver will
+    | allow maintenance mode to be controlled across multiple machines.
+    |
+    | Supported drivers: "file", "cache"
+    |
+    */
+
+    'maintenance' => [
+        'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
+        'store' => env('APP_MAINTENANCE_STORE', 'database'),
+    ],
+
+];
