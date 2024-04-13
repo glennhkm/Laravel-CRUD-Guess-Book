@@ -12,7 +12,7 @@
     <link href="{{asset('/backend/css/dataTable.min.css')}}" rel="stylesheet">  
     <link rel="stylesheet" href="{{ asset('form/css/style.css') }}">
     @vite('resources/css/app.css')
-    <title>Document</title>
+    <title>Guest Book</title>
 </head>
 <body class="w-full h-screen overflow-hidden">
 
