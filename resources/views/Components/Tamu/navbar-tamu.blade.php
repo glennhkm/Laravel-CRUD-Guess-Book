@@ -5,7 +5,7 @@
             <a class="hover:text-[#e3b04b] font-semibold text-sm xl:text-base 2xl:text-xl {{request()->is('/') ? 'text-[#e3b04b]' : ''}}" href="/">Reservation</a>
         </li>
         <li class="hover:scale-110 duration-150">
-            <a class="hover:text-[#e3b04b] font-semibold text-sm xl:text-base 2xl:text-xl {{request()->is('guess-list') ? 'text-[#e3b04b]' : ''}}" href="/guess-list">Guess List</a>
+            <a class="hover:text-[#e3b04b] font-semibold text-sm xl:text-base 2xl:text-xl {{request()->is('guest-list') ? 'text-[#e3b04b]' : ''}}" href="/guest-list">Guest List</a>
         </li>
         <li class="hover:scale-[1.03] duration-150">
             <a class=" font-semibold text-white" href="/admin">

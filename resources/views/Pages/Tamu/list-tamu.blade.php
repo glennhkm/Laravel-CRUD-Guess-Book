@@ -1,7 +1,7 @@
 @extends('Layouts.Tamu.app')
 @section('content')
     <section class="w-full h-[90vh] flex flex-col items-center gap-6 xl:gap-8 xl:justify-center">
-        <h1 class="font-extrabold text-3xl xl:text-4xl 2xl:text-5xl -mt-7 xl:-mt-12 2xl:-mt-16 2xl:mb-1 tracking-wide">GUESS LIST</h1>
+        <h1 class="font-extrabold text-3xl xl:text-4xl 2xl:text-5xl -mt-7 xl:-mt-12 2xl:-mt-16 2xl:mb-1 tracking-wide">GUEST LIST</h1>
         <div class="w-[60%] h-[75%] xl:h-[75%] rounded-md shadow-xl border relative scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thin scrollbar-thumb-[#e3b04b]/85 scrollbar-track-transparent overflow-y-scroll">
             <table class="w-full">
                 <thead class="bg-[#e3b04b] sticky top-0">

@@ -7,7 +7,7 @@
             </div>
         @endif
         <div class="card-header">
-            Guess Book <a href="{{ url('admin/form-tambah') }}" class="btn btn-success"> Add New Guess </a>
+            Guest Book <a href="{{ url('admin/form-tambah') }}" class="btn btn-success"> Add New Guest </a>
         </div>
         <div class="card-body">
             <table class="table" id="myTable">

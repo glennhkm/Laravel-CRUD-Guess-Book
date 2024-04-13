@@ -32,7 +32,7 @@
             <li class="nav-item {{request()->is('admin/tamu') ? 'active' : ''}}">
                 <a class="nav-link" href="{{route('admin-tamu')}}">
                     <i class="fas fa-fw fa-users"></i>
-                    <span class="">Data Buku Tamu</span></a>
+                    <span class="">Guest Book Data</span></a>
             </li>
 
         </ul>

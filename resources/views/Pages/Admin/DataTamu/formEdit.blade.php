@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-center">
         <div class="card" style="width:40%">
             <div class="card-header">
-                Edit Guess
+                Edit Guest
             </div>
             <div class="card-body">
                 <form action= "{{url('admin/update-data')}}" method="post">
@@ -16,7 +16,7 @@
                         <label for="kontak">Contact</label>
                         <input type="kontak" class="form-control" required name="kontak" id="tlpon" aria-describedby="Contact" value="{{ $errors->has('kontak') ? old('kontak') : $data->kontak }}">
                         @if ($errors->has('kontak'))
-                            <p class="text-xs pl-1 text-danger mt-1">{{$errors->first('kontak')}}</p>
+                            <p class="text-xs xl:text-sm pl-1 text-danger mt-1">{{$errors->first('kontak')}}</p>
                         @endif
                     </div>
                      <div class="form-group">
@@ -27,7 +27,7 @@
                         <label for="email_tamu">Email</label>
                         <input type="email_tamu" class="form-control" required name="email_tamu" id="email_tamu" aria-describedby="Email" value="{{ $errors->has('email_tamu') ? old('email_tamu') : $data->email_tamu }}">
                         @if ($errors->has('email_tamu'))
-                            <p class="text-xs pl-1 text-danger mt-1">{{$errors->first('email_tamu')}}</p>
+                            <p class="text-xs xl:text-sm pl-1 text-danger mt-1">{{$errors->first('email_tamu')}}</p>
                         @endif
                     </div>
                     <input type="hidden" value="{{$data->id}}" name="id">

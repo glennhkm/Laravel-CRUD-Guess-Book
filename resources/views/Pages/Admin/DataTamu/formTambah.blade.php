@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-center">
         <div class="card" style="width:40%">
             <div class="card-header">
-                Add New Guess
+                Add New Guest
             </div>
             <div class="card-body">
                 <form action= "{{url('admin/simpan-data')}}" method="post">

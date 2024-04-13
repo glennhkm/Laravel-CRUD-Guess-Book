@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(TamuController::class)->group(function() {
     Route::get('/', 'index')->name('show-tamu');  
-    Route::get('/guess-list', 'showTamu')->name('show-tamu');  
+    Route::get('/guest-list', 'showTamu')->name('show-tamu');  
     Route::post('simpan-bukutamu', 'simpanTamu')->name('simpan-bukutamu');
 });
 
